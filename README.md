@@ -48,8 +48,11 @@ The getBalance function enables users to check their Degen token balance.
 ### Deployment Information
 
 Contract Address: 0x535dEA564CdFe2B559eB5a05299F09AeCB934878
+
 Compiler Version: Solidity 0.8.9
+
 License: MIT License (SPDX-License-Identifier: MIT)
+
 Snowtrack-link: https://testnet.snowtrace.io/token/0x535dEA564CdFe2B559eB5a05299F09AeCB934878?chainId=43113
 
 
