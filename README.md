@@ -1,49 +1,56 @@
-# MyToken Smart Contract
+# DegenToken Smart Contract
 
-This is a Solidity smart contract written to create an ERC20 token called MyToken (MTF). The contract inherits @openzeppelin/contracts/token/ERC20/ERC20.sol. It includes functionalities for minting, burning, and transferring tokens. It is designed to be deployed on the Ethereum blockchain.
+This is a Solidity smart contract written to create an ERC20 token called DegenToken for Degen Gaming 🎮. A Unique token that can reward players and take their game to the next level. Tokens that can be earned by players in their game and then exchanged for rewards in their in-game store. A smart step towards increasing player loyalty and retention 🧠. The contract inherits @openzeppelin/contracts/token/ERC20/ERC20.sol. It includes functionalities for minting, burning, and transferring tokens. It is designed to be deployed on the Avalanche Testnet Fuji blockchain.
 
 
 ## Features
 
-1. Minting: The contract owner can mint new tokens and assign them to a specified address.
-2. Burning: Any user can burn their own tokens, reducing the total supply.
-3. Transferring: Users can transfer tokens to another address.
-4. ERC20 Compatibility: The contract adheres to the ERC20 standard, ensuring compatibility with existing Ethereum tools and services.
+1. ERC20 Compatibility: DegenToken implements the ERC20 standard, allowing seamless integration with other Ethereum-based platforms and wallets.
+
+2. Minting: The contract owner has the ability to mint new Degen tokens and allocate them to specific addresses.
+
+3. Burning: Users can burn their Degen tokens, effectively removing them from circulation.
+
+4. Item Redemption: Users can redeem in-game items using their Degen tokens. Each item has a specified price in Degen tokens.
+
+5. Ownership: The contract utilizes the Ownable contract from OpenZeppelin, enabling ownership management functionalities.
 
 
-### Executing program
+### Functionality
 
-To deploy the contract, follow these steps:
+1. Minting
 
-You can use Remix, an online Solidity IDE. To get started, go to the Remix website at https://remix.ethereum.org/.
+The mint function allows the contract owner to mint new Degen tokens and assign them to a specific address.
+Only the contract owner can call this function.
 
-Once you are on the Remix website, create a new file by clicking on the "+" icon in the left-hand sidebar. Save the file with a .sol extension (e.g., MyToken.sol). Copy and paste the contract code into the file
+2. Redeeming Items
+
+Users can redeem in-game items using their Degen tokens through the redeemItem function.
+Each item has a predefined price in Degen tokens.
+Users must have sufficient Degen token balance to redeem an item.
+Upon successful redemption, the corresponding amount of Degen tokens is transferred to the contract, and the user's balance is updated.
+
+3. Transferring Degen Tokens
+
+Users can transfer their Degen tokens to other addresses using the transferDGNToken function.
+Users must have sufficient Degen token balance to perform the transfer.
+
+4. Burning Tokens
+
+Users can burn their Degen tokens, reducing the total supply.
+The burn function allows users to burn a specific amount of Degen tokens from their balance.
+
+5. Balance Inquiry
+
+The getBalance function enables users to check their Degen token balance.
 
 
+### Deployment Information
 
-To compile the code, click on the "Solidity Compiler" tab in the left-hand sidebar. Make sure the "Compiler" option is set to "0.8.0" (or another compatible version), and then click on the "Compile MyToken.sol" button.
-
-Once the code is compiled, you can deploy the contract by clicking on the "Deploy & Run Transactions" tab in the left-hand sidebar. Select the "MyToken" contract from the dropdown menu, and pick any environment of your choice you will like to deploy to.
-You should interact on remix local environment or pick injected provider to deploy to either testnet or mainnet (this is at a cost). It is important you know what you're doing to deploy to mainnet.
-
-To deploy click on the "Deploy" button.
-
-Once the contract is deployed, you can interact with it by calling it functions.
-
-
-### Usage
-
-Constructor
-Upon deployment, the constructor function initializes the token with the name "MyToken" and the symbol "MTF". It also mints an initial supply of 1,000,000,000 tokens to the deployer's address.
-
-Minting
-The mint function allows the contract owner to mint new tokens and assign them to a specified address.
-
-Burning
-The burn function allows any user to burn their own tokens, reducing the total token supply.
-
-Transferring
-Users can transfer tokens to another address using the transfer function. Additionally, the transferFrom function allows users to transfer tokens on behalf of another address, provided they have been approved to do so.
+Contract Address: 0x535dEA564CdFe2B559eB5a05299F09AeCB934878
+Compiler Version: Solidity 0.8.9
+License: MIT License (SPDX-License-Identifier: MIT)
+Snowtrack-link: https://testnet.snowtrace.io/token/0x535dEA564CdFe2B559eB5a05299F09AeCB934878?chainId=43113
 
 
 ## Authors
@@ -51,16 +58,12 @@ Users can transfer tokens to another address using the transfer function. Additi
 Adekunle Stephen Omorotimi
 [@Okste1234](https://twitter.com/okste1234)
 
+
 ## Loom(video) walkthrough
 ```bash
-hhttps://www.loom.com/share/8d3008df63eb494a8bb6295b42cfbff8?sid=46db770a-6d58-491f-bd63-81e5d2012b02
+https://www.loom.com/share/f6dc437331ce4880b557d109edc409a5?sid=f7a2c8ed-8b65-4f22-8dbb-bd5be4401e93
 ```
-
-### License
-
-This project is licensed under the MIT License
-
 
 ### Disclaimer
 
-This contract is provided as-is without any warranties or guarantees. Use it at your own risk. Make sure to review and test the contract thoroughly before deploying it to the Ethereum mainnet or any other production environment.
+This contract is provided as-is without any warranties or guarantees. Use it at your own risk. Make sure to review and test the contract thoroughly before deploying it to the Avalanche mainnet or any other production environment.
